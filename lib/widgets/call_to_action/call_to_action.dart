@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
+import 'call_to_action_tablet_desktop.dart';
+import 'call_to_action_mobile.dart';
 
 class CallToAction extends StatelessWidget {
   final String title;
@@ -6,18 +10,11 @@ class CallToAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
-      decoration: BoxDecoration(
-          color: Colors.lightBlue, borderRadius: BorderRadius.circular(5)),
-      child: Text(
-        title,
-        style: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w800,
-          color: Colors.white,
-        ),
-      ),
+    return ScreenTypeLayout.builder(
+      mobile: (BuildContext context) =>
+          const CallToActionMobile(title: 'Join Course'),
+      tablet: (BuildContext context) =>
+          const CallToActionTabletDesktop(title: 'Join Course'),
     );
   }
 }
