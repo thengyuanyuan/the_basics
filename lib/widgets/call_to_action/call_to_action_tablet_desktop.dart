@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants/app_colors.dart';
 
 class CallToActionTabletDesktop extends StatelessWidget {
   final String title;
@@ -9,7 +10,7 @@ class CallToActionTabletDesktop extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
       decoration: BoxDecoration(
-        color: Colors.lightBlue,
+        color: primaryColor,
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
