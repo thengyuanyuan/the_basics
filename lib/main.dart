@@ -1,14 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:the_basics/locator.dart';
+import 'package:the_basics/views/layout_template/layout_template.dart';
 import 'firebase_options.dart';
-
-import 'views/home/home_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  setupLocator();
   runApp(const MyApp());
 }
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
               fontFamily: 'Open Sans',
             ),
       ),
-      home: const HomeView(),
+      home: const LayoutTemplate(),
     );
   }
 }

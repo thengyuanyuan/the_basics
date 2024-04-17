@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
+import '../../services/navigation_service.dart';
+import '../../locator.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
-  const NavBarItem(this.title, {super.key});
+  final String navigationPath;
+
+  const NavBarItem(
+      {super.key, required this.title, required this.navigationPath});
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(fontSize: 18),
+    return GestureDetector(
+      onTap: () {
+        locator<NavigationService>().navigateTo(navigationPath);
+      },
+      child: Text(
+        title,
+        style: const TextStyle(fontSize: 18),
+      ),
     );
   }
 }
