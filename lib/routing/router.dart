@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../views/about/about.dart';
-import '../views/episodes/episodes.dart';
+import '../views/about/about_view.dart';
+import '../views/episodes/episodes_view.dart';
 import '../views/home/home_view.dart';
 import 'routes_names.dart';
 
