@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+import 'package:the_basics/viewmodels/episodes_viewmodel.dart';
 
 import '../../datamodels/season_details_model.dart';
 import '../../widgets/episodes_list/episodes_list.dart';
@@ -9,24 +11,27 @@ class EpisodesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 100,
-          ),
-          SeasonDetails(
-            details: SeasonDetailsModel(
-              title: 'SEASON 1',
-              description:
-                  'This season covers the absolute basics of Flutter Web Dev to get us up and running with a basic web app.',
+    return ViewModelBuilder<EpisodesViewModel>.reactive(
+      viewModelBuilder: () => EpisodesViewModel(),
+      builder: (context, model, child) => SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 100,
             ),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
-          EpisodesList(),
-        ],
+            SeasonDetails(
+              details: SeasonDetailsModel(
+                title: 'SEASON 1',
+                description:
+                    'This season covers the absolute basics of Flutter Web Dev to get us up and running with a basic web app.',
+              ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            EpisodesList(episodes: model.episodes),
+          ],
+        ),
       ),
     );
   }

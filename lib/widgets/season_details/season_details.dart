@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:provider/provider.dart';
 
 import '../../datamodels/season_details_model.dart';
 import 'season_details_desktop.dart';
@@ -11,9 +12,12 @@ class SeasonDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout.builder(
-      desktop: (BuildContext context) => SeasonDetailsDesktop(details: details),
-      mobile: (BuildContext context) => SeasonDetailsMobile(details: details),
+    return Provider.value(
+      value: details,
+      child: ScreenTypeLayout.builder(
+        desktop: (BuildContext context) => const SeasonDetailsDesktop(),
+        mobile: (BuildContext context) => const SeasonDetailsMobile(),
+      ),
     );
   }
 }

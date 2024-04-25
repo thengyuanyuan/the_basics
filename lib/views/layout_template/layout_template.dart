@@ -29,6 +29,8 @@ class LayoutTemplate extends StatelessWidget {
                   key: locator<NavigationService>().navigatorKey,
                   onGenerateRoute: generateRoute,
                   initialRoute: episodesRoute,
+
+                  ///TODO: change it back to homeRoute
                 ),
               ),
             ],
@@ -38,4 +40,3 @@ class LayoutTemplate extends StatelessWidget {
     });
   }
 }
-// https://www.youtube.com/watch?v=qailF0Ut_c0
