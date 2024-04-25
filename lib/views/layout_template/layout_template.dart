@@ -28,9 +28,7 @@ class LayoutTemplate extends StatelessWidget {
                 child: Navigator(
                   key: locator<NavigationService>().navigatorKey,
                   onGenerateRoute: generateRoute,
-                  initialRoute: episodesRoute,
-
-                  ///TODO: change it back to homeRoute
+                  initialRoute: homeRoute,
                 ),
               ),
             ],

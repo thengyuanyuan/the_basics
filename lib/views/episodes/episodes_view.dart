@@ -13,6 +13,7 @@ class EpisodesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<EpisodesViewModel>.reactive(
       viewModelBuilder: () => EpisodesViewModel(),
+      onViewModelReady: (model) => model.getEpisodes(),
       builder: (context, model, child) => SingleChildScrollView(
         child: Column(
           children: [
@@ -29,7 +30,9 @@ class EpisodesView extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            EpisodesList(episodes: model.episodes),
+            model.episodes == []
+                ? const CircularProgressIndicator()
+                : EpisodesList(episodes: model.episodes)
           ],
         ),
       ),
