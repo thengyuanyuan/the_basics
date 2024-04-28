@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_basics/extensions/hover_extensions.dart';
 
 import 'call_to_action_tablet_desktop.dart';
 import 'call_to_action_mobile.dart';
@@ -15,6 +16,6 @@ class CallToAction extends StatelessWidget {
           const CallToActionMobile(title: 'Join Course'),
       tablet: (BuildContext context) =>
           const CallToActionTabletDesktop(title: 'Join Course'),
-    );
+    ).showCursorOnHover.moveUpOnHover;
   }
 }
