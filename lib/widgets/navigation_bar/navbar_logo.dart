@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/extensions/hover_extensions.dart';
 
 import '../../routing/routes_names.dart';
 import '../../locator.dart';
@@ -20,6 +21,6 @@ class NavBarLogo extends StatelessWidget {
         width: 150,
         child: Image.asset('assets/images/logo.png'),
       ),
-    );
+    ).showCursorOnHover;
   }
 }
