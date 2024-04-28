@@ -5,7 +5,7 @@ import '../datamodels/season_details_model.dart';
 import '../routing/routes_names.dart';
 import '../widgets/navbar_item/navbar_item.dart';
 
-var SAMPLE_NAVBAR_ITEMS = [
+var sampleNavbarItems = const [
   NavBarItem(
     title: 'Episodes',
     icon: Icons.videocam,
@@ -18,7 +18,7 @@ var SAMPLE_NAVBAR_ITEMS = [
   ),
 ];
 
-var SAMPLE_EPISODE_ITEMS = [
+var sampleEpisodeItems = [
   EpisodeItemModel(
     title: 'Setup, Build and Deploy',
     duration: 14.07,
@@ -41,7 +41,7 @@ var SAMPLE_EPISODE_ITEMS = [
   ),
 ];
 
-var SAMPLE_SEASON_DETAILS = [
+var sampleSeasonDetails = [
   SeasonDetailsModel(
     title: 'SEASON 1',
     description:
@@ -49,20 +49,25 @@ var SAMPLE_SEASON_DETAILS = [
   ),
 ];
 
-// [{
-//   "title": "Setup, Build and Deploy",
-//   "duration": 14.07,
-//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/032/032.jpg",
-// },{
-//   "title": "Adding a Responsive UI",
-//   "duration": 18.54,
-//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/033/033.jpg",
-// },{
-//   "title": "Layout Templates",
-//   "duration": 14.55,
-//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/034/034.jpg",
-// },{
-//   "title": "State Management and Api integration",
-//   "duration": 14.55,
-//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/035/035.jpg",
-// }]
+// [
+//   {
+//     "title": "Setup, Build and Deploy",
+//     "duration": 14.07,
+//     "imageUrl": "https://www.filledstacks.com/assets/tutorials/032/032.jpg"
+//   },
+//   {
+//     "title": "Adding a Responsive UI",
+//     "duration": 18.54,
+//     "imageUrl": "https://www.filledstacks.com/assets/tutorials/033/033.jpg"
+//   },
+//   {
+//     "title": "Layout Templates",
+//     "duration": 14.55,
+//     "imageUrl": "https://www.filledstacks.com/assets/tutorials/034/034.jpg"
+//   },
+//   {
+//     "title": "State Management and API Integration",
+//     "duration": 14.55,
+//     "imageUrl": "https://www.filledstacks.com/assets/tutorials/035/035.jpg"
+//   }
+// ]
