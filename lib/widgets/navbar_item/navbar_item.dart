@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:the_basics/datamodels/navbar_item_model.dart';
 
+import '../../datamodels/navbar_item_model.dart';
+import '../../extensions/hover_extensions.dart';
 import '../../services/navigation_service.dart';
 import '../../locator.dart';
 import 'navbar_item_mobile.dart';
@@ -36,7 +37,7 @@ class NavBarItem extends StatelessWidget {
         child: ScreenTypeLayout.builder(
           tablet: (BuildContext context) => const NavBarItemTabletDesktop(),
           mobile: (BuildContext context) => const NavBarItemMobile(),
-        ),
+        ).showCursorOnHover,
       ),
     );
   }

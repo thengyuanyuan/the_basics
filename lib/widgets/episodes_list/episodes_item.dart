@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/extensions/hover_extensions.dart';
 
 import '../../datamodels/episode_item_model.dart';
 
@@ -49,6 +50,6 @@ class EpisodeItem extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ).showCursorOnHover;
   }
 }

@@ -6,24 +6,26 @@ import 'package:the_basics/constants/sample_data.dart';
 import '../datamodels/episode_item_model.dart';
 
 class Api {
-  var url =
-      Uri.https('www.googleapis.com', '/books/v1/volumes', {'q': '{http}'});
+  // https://mp1ae44e1b203bd3e562.free.beeceptor.com
+  var url = Uri.https('mp1ae44e1b203bd3e562.free.beeceptor.com', '/episodes');
   // static const String _apiEndpoint =
   //     'https://us-central1-thebasics-2f123.cloudfunctions.net/thebasics/courseEpisodes';
   // The url is down
-  // Use hard code instead
 
   Future getEpisodes() async {
     debugPrint('Get Episode');
     var response = await http.get(url);
+    debugPrint(response.body.toString());
 
     if (response.statusCode == 200) {
-      debugPrint('The url provided is down');
-      // var episodes = (json.decode(response.body) as List)
-      //     .map((e) => EpisodeItemModel.fromJson(e))
-      //     .toList();
+      var episodes = (json.decode(response.body) as List)
+          .map((e) => EpisodeItemModel.fromJson(e))
+          .toList();
+      // TODO: json decode problem
+      debugPrint('done json decode');
+      debugPrint(episodes.toString());
       // TODO: change this api
-      var episodes = SAMPLE_EPISODE_ITEMS;
+      // var episodes = SAMPLE_EPISODE_ITEMS;
 
       return episodes;
     }

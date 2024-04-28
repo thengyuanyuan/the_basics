@@ -48,3 +48,21 @@ var SAMPLE_SEASON_DETAILS = [
         'This season covers the absolute basics of Flutter Web Dev to get us up and running with a basic web app.',
   ),
 ];
+
+// [{
+//   "title": "Setup, Build and Deploy",
+//   "duration": 14.07,
+//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/032/032.jpg",
+// },{
+//   "title": "Adding a Responsive UI",
+//   "duration": 18.54,
+//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/033/033.jpg",
+// },{
+//   "title": "Layout Templates",
+//   "duration": 14.55,
+//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/034/034.jpg",
+// },{
+//   "title": "State Management and Api integration",
+//   "duration": 14.55,
+//   "imageUrl": "https://www.filledstacks.com/assets/tutorials/035/035.jpg",
+// }]
